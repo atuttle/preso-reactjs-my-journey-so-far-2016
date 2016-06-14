@@ -1,0 +1,10 @@
+var EventEmitter = require('events')
+var announce = new EventEmitter()
+
+announce.on('create', function(data){
+  console.log('new announcement: ', data)
+})
+
+announce.emit('create', 'hello world')
+
+//=> new announcement: hello world

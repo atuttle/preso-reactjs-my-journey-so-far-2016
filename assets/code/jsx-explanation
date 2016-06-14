@@ -1,0 +1,43 @@
+<div
+  id="someId"
+  className="myClass"
+>I am a div!</div>
+
+
+
+React.createElement(
+  'div',
+  {
+    id: 'someId',
+    className: 'myClass'
+  },
+  'I am a div!'
+)
+
+
+
+<div
+  id="someId"
+  class="myClass"
+>I am a div!</div>
+
+
+
+<button disabled={
+  enabled ? '' : 'disabled'
+}></button>
+
+
+
+// ipa_drinkers = [..., ..., ...]
+ipa_drinkers.map(function(person){
+  return <li>{person.name}</li>
+})
+
+
+
+return (
+  <div dataTooltip={this.props.tooltip}>
+    <button>{this.props.label}</button>
+  </div>
+)

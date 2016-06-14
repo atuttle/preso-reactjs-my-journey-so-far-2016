@@ -1,0 +1,30 @@
+var React = require('react')
+var store = require('../store.js')
+
+function filterLink( filter ){
+  store.dispatch({
+    type: 'SET_VISIBILITY_FILTER'
+    ,visibilityFilter: filter
+  })
+}
+
+function FilterButton( label, filter ){
+  return (
+    <button
+      onClick={filterLink.bind(null, filter)}
+    >{label}</button>
+  )
+}
+
+var HeaderBar = React.createClass({
+  render: function() {
+    return (
+      <section className="event-header">
+        //            Label      filter
+        {FilterButton('Parties', 'parties')}
+        {FilterButton('Alpha',   'alpha')}
+        {FilterButton('Undo',    'undo')}
+      </section>
+    )
+  }
+})

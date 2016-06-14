@@ -1,0 +1,12 @@
+MyElement = React.createElement(
+  'div',
+  { className: 'error-message' },
+  'Hello World'
+)
+
+ReactDOM.render(
+  MyElement,
+  document.getElementById('app')
+)
+
+<div class="error-message">Hello World</div>

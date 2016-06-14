@@ -1,0 +1,27 @@
+var selectedEvent = function( state, action ){
+  state = state || null
+  action = action || {}
+  action.type = action.type || ''
+  switch (action.type) {
+
+    case 'SET_EVENTS'   :
+      if ( state === null ) return null
+      //update selected event so changes
+      //propagate forward
+      for ( var ix in action.events ){
+        var evObj = action.events[ix]
+        if ( evObj.eventId === state.selectedEvent.eventId )
+          return evObj
+      }
+      return null
+
+    case 'EVENT_SELECT' : return action.event
+
+    case 'VIEW_EVENTS'  : return null
+
+    case 'LOGOUT'       : return null
+
+    default             : return state
+
+  }
+}

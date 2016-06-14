@@ -1,0 +1,10 @@
+MyElement = React.createElement(
+  tagName,
+  { attributes: 'values' },
+  [ children or null ]
+)
+
+ReactDOM.render(
+  MyElement,
+  document.getElementById('app')
+)

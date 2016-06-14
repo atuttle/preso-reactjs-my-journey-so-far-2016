@@ -1,0 +1,11 @@
+React.createElement('div', {className:'row'},
+  React.createElement('div',{className:'col'},
+    React.createElement('h1', {}, 'Hello')
+  )
+)
+
+<div class="row">
+  <div class="col">
+    <h1>Hello</h1>
+  </div>
+</div>

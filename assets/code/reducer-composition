@@ -1,0 +1,9 @@
+var rootReducer = combineReducers({
+	user: userReducer,
+	loading: loadingReducer,
+	events: eventsReducer,
+	selectedEvent: selectedEventReducer,
+	attendees: attendeesReducer,
+	visibilityFilter: visibilityFilterReducer,
+	queuedRequests: queuedRequestsReducer
+})

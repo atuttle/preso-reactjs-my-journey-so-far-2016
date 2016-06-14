@@ -1,0 +1,9 @@
+var MyComponent = React.createClass({
+
+  render: function(){},
+
+  shouldComponentUpdate: function(){},
+  componentWillMount: function(){},
+  componentDidMount: function(){}
+
+})

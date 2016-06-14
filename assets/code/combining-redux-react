@@ -1,0 +1,33 @@
+var React = require('react')
+var store = require('./store.js')
+
+//ui components
+var HeaderBar = require('./com/HeaderBar.js')
+
+var Application = React.createClass({
+  componentWillMount: function(){
+    this.setState( store.getState() )
+  },
+  componentDidMount: function(){
+    var self = this
+    store.subscribe(function(){
+      self.setState( store.getState() )
+    })
+  },
+  render: function(){
+    var s = this.state
+    return (
+      <div>
+        <HeaderBar title={this.state.title} />
+        <AttendeesList
+          vizAttendees={this.state.viz_attendees}
+        />
+      </div>
+    )
+  }
+})
+
+ReactDOM.render(
+  <Application />,
+  document.getElementById('root')
+)

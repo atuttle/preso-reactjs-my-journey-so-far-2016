@@ -1,0 +1,24 @@
+var RedLabel = React.createClass({
+
+  render: function(){
+
+    return React.createElement(
+      'div',
+      { className: 'red-label' },
+      this.props.text
+    )
+
+  },
+
+  propTypes: {
+    text: React.PropTypes.string.isRequired
+  }
+
+})
+
+React.createElement(
+  RedLabel,
+  { text: 'React is awesome!' }
+)
+
+<div class="red-label">React is awesome!</div>

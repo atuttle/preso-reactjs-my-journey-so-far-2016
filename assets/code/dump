@@ -1,0 +1,7 @@
+function Dump(props) {
+  return (
+    <pre>
+      { JSON.stringify(props, null, '  ') }
+    </pre>
+  )
+}

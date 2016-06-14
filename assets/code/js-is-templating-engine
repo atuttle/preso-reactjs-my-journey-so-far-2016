@@ -1,0 +1,37 @@
+adams = [
+  {name: 'Tuttle',  beer: 'IPA'},
+  {name: 'Cameron', beer: 'Yes please! 🍺'}
+]
+
+IPA_drinkers =
+  adams.filter(
+    function(a){ return a.beer === 'IPA' }
+  )
+
+IPA_items = IPA_drinkers.map(
+    function(a){
+      return React.createElement(
+        'li', {}, a.name
+      )
+    }
+  )
+
+MyContent = React.createElement(
+  'div', {}, [
+    React.createElement(
+      'h1',
+      {},
+      'IPA Drinkers'
+    )
+    ,React.createElement(
+      'ul',
+      {},
+      IPA_items
+    )
+  ]
+)
+
+ReactDOM.render(
+  MyContent,
+  document.getElementById('app')
+)
