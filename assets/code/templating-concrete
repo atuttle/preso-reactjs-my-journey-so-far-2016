@@ -9,4 +9,6 @@ ReactDOM.render(
   document.getElementById('app')
 )
 
-<div class="error-message">Hello World</div>
+<div id="app">
+  <div class="error-message">Hello World</div>
+</div>

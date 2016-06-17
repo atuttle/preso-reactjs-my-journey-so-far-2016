@@ -41,3 +41,7 @@ return (
     <button>{this.props.label}</button>
   </div>
 )
+
+
+
+<button style={{ maxWidth: '100%' }}></button>

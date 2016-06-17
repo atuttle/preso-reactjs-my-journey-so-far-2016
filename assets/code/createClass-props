@@ -1,3 +1,8 @@
+React.createElement(
+  RedLabel,
+  { text: 'React is awesome!' }
+)
+
 var RedLabel = React.createClass({
 
   render: function(){
@@ -15,10 +20,5 @@ var RedLabel = React.createClass({
   }
 
 })
-
-React.createElement(
-  RedLabel,
-  { text: 'React is awesome!' }
-)
 
 <div class="red-label">React is awesome!</div>

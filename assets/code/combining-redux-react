@@ -18,9 +18,9 @@ var Application = React.createClass({
     var s = this.state
     return (
       <div>
-        <HeaderBar title={this.state.title} />
+        <HeaderBar title={s.title} />
         <AttendeesList
-          vizAttendees={this.state.viz_attendees}
+          vizAttendees={s.viz_attendees}
         />
       </div>
     )

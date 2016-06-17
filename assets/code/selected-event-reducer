@@ -6,11 +6,10 @@ var selectedEvent = function( state, action ){
 
     case 'SET_EVENTS'   :
       if ( state === null ) return null
-      //update selected event so changes
-      //propagate forward
+      var sel = state.selectedEvent.eventId
       for ( var ix in action.events ){
         var evObj = action.events[ix]
-        if ( evObj.eventId === state.selectedEvent.eventId )
+        if ( evObj.eventId === sel )
           return evObj
       }
       return null

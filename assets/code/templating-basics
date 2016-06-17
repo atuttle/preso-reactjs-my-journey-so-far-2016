@@ -1,7 +1,7 @@
 MyElement = React.createElement(
   tagName,
   { attributes: 'values' },
-  [ children or null ]
+  [ children or null or undefined ]
 )
 
 ReactDOM.render(
